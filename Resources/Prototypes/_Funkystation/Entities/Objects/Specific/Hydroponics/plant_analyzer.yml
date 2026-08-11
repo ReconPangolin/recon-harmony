@@ -1,0 +1,53 @@
+﻿- type: entity
+  parent: BaseItem
+  abstract: True
+  id: BasePlantAnalyzer
+  components:
+  - type: Item
+    heldPrefix: analyzer
+    storedRotation: -90
+  - type: ActivatableUI
+    key: enum.PlantAnalyzerUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.PlantAnalyzerUiKey.Key:
+        type: PlantAnalyzerBoundUserInterface
+  - type: ItemToggle
+    onUse: false
+  - type: PlantAnalyzer
+    scanningEndSound:
+      path: "/Audio/Items/Medical/healthscanner.ogg"
+    version: 1
+    scanDelay: 4s
+
+
+- type: entity
+  parent: BasePlantAnalyzer
+  id: PlantAnalyzerV1
+  name: plant analyzer v1
+  description: A run-down device that can be used to identify basic plant traits.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/healthanalyzer.rsi
+    layers:
+    - state: icon
+    - state: analyzer
+      shader: unshaded
+
+- type: entity
+  parent: BasePlantAnalyzer
+  id: PlantAnalyzerV2
+  name: plant analyzer v2
+  description: A hand-held scanner capable of detecting plant traits, tolerences and reagents.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/healthanalyzer.rsi
+    layers:
+    - state: icon
+    - state: analyzer
+      shader: unshaded
+  - type: PlantAnalyzer
+    scanningEndSound:
+      path: "/Audio/Items/Medical/healthscanner.ogg"
+    version: 2
+    scanDelay: 2s
