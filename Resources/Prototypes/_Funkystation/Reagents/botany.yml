@@ -1,0 +1,13 @@
+﻿- type: reagent
+  id: InstabilityTest
+  name: reagent-name-instability-test
+  group: Botanical
+  desc: reagent-desc-instability-test
+  physicalDesc: reagent-physical-desc-strong-smelling
+  flavor: bitter
+  color: "#a1000b"
+  boilingPoint: 55.5
+  meltingPoint: -50.0
+  plantMetabolism:
+  - !type:PlantAdjustInstability
+    amount: 1
