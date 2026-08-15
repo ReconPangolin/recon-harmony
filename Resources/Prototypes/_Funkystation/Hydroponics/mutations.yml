@@ -1,0 +1,9 @@
+﻿- type: fuPlantMutation
+  id: PlantHot
+  plantEffects:
+  - effects:
+    - !type:Flammable
+      multiplier: 3.75
+      multiplierOnExisting: 0.75
+    - !type:Ignite
+    appliesToHarvester: true

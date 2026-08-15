@@ -2289,6 +2289,9 @@
         min: 4
         max: 8
         potencyDivisor: 30
+  - type: FuPlantMutation #Funky
+    mutations:
+      - PlantHot
 
 - type: entity
   parent: BasePlant
